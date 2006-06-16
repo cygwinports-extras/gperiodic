@@ -1,0 +1,4 @@
+category: Science
+requires: cygwin gtk2-x11-runtime libintl3
+sdesc: "Periodic table of the elements for GTK2"
+ldesc: "Periodic table of the elements for GTK2"

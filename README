@@ -1,0 +1,90 @@
+gperiodic
+-------------------------------------------
+Periodic table of the elements for GTK2.
+
+Runtime requirements:
+  cygwin-1.5.18-1
+  atk-runtime-1.9.1-1
+  expat-1.95.8-1
+  glib2-runtime-2.6.5-1
+  gtk2-x11-runtime-2.6.8-1
+  libXft2-2.1.6-1
+  libfontconfig1-2.2.2-1
+  libfreetype26-2.1.9-1
+  libiconv2-1.9.2-1
+  libintl3-0.14.1-1
+  pango-runtime-1.8.1-1
+  xorg-x11-bin-dlls-6.8.2.0-1
+  zlib-1.2.3-1
+
+Build requirements:
+  cygwin-1.5.18-1
+  binutils-20050610-1
+  gcc-core-3.4.4-1
+  make-3.80-1
+  pkgconfig-0.17.2-2
+
+  atk-devel-1.9.1-1
+  expat-1.95.8-1
+  gettext-0.14.1-1
+  gettext-devel-0.14.1-1
+  glib2-devel-2.6.5-1
+  gtk2-x11-devel-2.6.8-1
+  libXft-devel-2.1.6-1
+  libfontconfig-devel-2.2.2-1
+  libfreetype2-devel-2.1.9-1
+  libiconv-1.9.2-1
+  pango-devel-1.8.1-1
+  xorg-x11-devel-6.8.2.0-1
+  zlib-1.2.3-1
+
+Canonical homepage:
+  http://koti.welho.com/jfrantz/software/gperiodic.html
+
+-------------------------------------------
+
+Build instructions:
+  unpack gperiodic-2.0.8-1-src.tar.bz2
+    if you use setup to install this src package, it will be
+	 unpacked under /usr/src automatically
+  cd /usr/src
+  ./gperiodic-2.0.8-1.sh all
+
+This will create:
+  /usr/src/gperiodic-2.0.8-1-src.tar.bz2
+  /usr/src/gperiodic-2.0.8-1.tar.bz2
+
+-------------------------------------------
+
+Files included in the binary package:
+
+  /usr/bin/gperiodic.exe
+  /usr/share/applications/gperiodic.desktop
+  /usr/share/doc/Cygwin/gperiodic-2.0.8.README
+  /usr/share/doc/gperiodic-2.0.8/AUTHORS
+  /usr/share/doc/gperiodic-2.0.8/ChangeLog
+  /usr/share/doc/gperiodic-2.0.8/gpl.txt
+  /usr/share/doc/gperiodic-2.0.8/INSTALL
+  /usr/share/doc/gperiodic-2.0.8/NEWS
+  /usr/share/doc/gperiodic-2.0.8/README
+  /usr/share/locale/da/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/fr/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/pl/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/sv/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/tr/LC_MESSAGES/gperiodic.mo
+  /usr/share/pixmaps/gperiodic-crystal.png
+  /usr/share/pixmaps/gperiodic.png
+
+------------------
+
+Port Notes:
+
+----- version 2.0.8-1 -----
+Version bump.
+
+----- version 2.0.7-1 -----
+Initial release for Cygwin.
+
+
+Cygwin port maintained by:
+http://cygwinports.dotsrc.org/
