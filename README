@@ -1,58 +1,45 @@
 gperiodic
 -------------------------------------------
-Periodic table of the elements for GTK2.
+GPeriodic is a program for looking up data of elements from the periodic 
+table. This program also features a non-graphical interface.
 
 Runtime requirements:
-  cygwin-1.5.18-1
-  atk-runtime-1.9.1-1
-  expat-1.95.8-1
-  glib2-runtime-2.6.5-1
-  gtk2-x11-runtime-2.6.8-1
-  libXft2-2.1.6-1
-  libfontconfig1-2.2.2-1
-  libfreetype26-2.1.9-1
-  libiconv2-1.9.2-1
-  libintl3-0.14.1-1
-  pango-runtime-1.8.1-1
-  xorg-x11-bin-dlls-6.8.2.0-1
-  zlib-1.2.3-1
+  cygwin-1.5.24-2
+  glib2-2.12.12-2
+  gtk2-x11-2.10.13-1
+  libintl8-0.15-1
 
 Build requirements:
-  cygwin-1.5.18-1
-  binutils-20050610-1
-  gcc-core-3.4.4-1
-  make-3.80-1
-  pkgconfig-0.17.2-2
-
-  atk-devel-1.9.1-1
-  expat-1.95.8-1
-  gettext-0.14.1-1
-  gettext-devel-0.14.1-1
-  glib2-devel-2.6.5-1
-  gtk2-x11-devel-2.6.8-1
-  libXft-devel-2.1.6-1
-  libfontconfig-devel-2.2.2-1
-  libfreetype2-devel-2.1.9-1
-  libiconv-1.9.2-1
-  pango-devel-1.8.1-1
-  xorg-x11-devel-6.8.2.0-1
-  zlib-1.2.3-1
+(besides corresponding devel packages)
+  cygwin-1.5.24-2
+  binutils-20060817-1
+  cygport-0.3.1-1
+  gcc-core-3.4.4-3
+  gettext-devel-0.15-1
+  make-3.81-1
+  pkg-config-0.21-1
 
 Canonical homepage:
-  http://koti.welho.com/jfrantz/software/gperiodic.html
+  http://www.frantz.fi/software/gperiodic.php
+
+Canonical download:
+  http://www.frantz.fi/software/
+
+License:
+  GPL-2
 
 -------------------------------------------
 
 Build instructions:
-  unpack gperiodic-2.0.8-1-src.tar.bz2
+  unpack gperiodic-2.0.9-X-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  ./gperiodic-2.0.8-1.sh all
+  cygport ./gperiodic-2.0.9-X.cygport all
 
 This will create:
-  /usr/src/gperiodic-2.0.8-1-src.tar.bz2
-  /usr/src/gperiodic-2.0.8-1.tar.bz2
+  /usr/src/gperiodic-2.0.9-X-src.tar.bz2
+  /usr/src/gperiodic-2.0.9-X.tar.bz2
 
 -------------------------------------------
 
@@ -60,15 +47,16 @@ Files included in the binary package:
 
   /usr/bin/gperiodic.exe
   /usr/share/applications/gperiodic.desktop
-  /usr/share/doc/Cygwin/gperiodic-2.0.8.README
-  /usr/share/doc/gperiodic-2.0.8/AUTHORS
-  /usr/share/doc/gperiodic-2.0.8/ChangeLog
-  /usr/share/doc/gperiodic-2.0.8/gpl.txt
-  /usr/share/doc/gperiodic-2.0.8/INSTALL
-  /usr/share/doc/gperiodic-2.0.8/NEWS
-  /usr/share/doc/gperiodic-2.0.8/README
+  /usr/share/doc/Cygwin/gperiodic-2.0.9.README
+  /usr/share/doc/gperiodic-2.0.9/AUTHORS
+  /usr/share/doc/gperiodic-2.0.9/ChangeLog
+  /usr/share/doc/gperiodic-2.0.9/GPL.txt
+  /usr/share/doc/gperiodic-2.0.9/INSTALL
+  /usr/share/doc/gperiodic-2.0.9/README
   /usr/share/locale/da/LC_MESSAGES/gperiodic.mo
   /usr/share/locale/fr/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/gl/LC_MESSAGES/gperiodic.mo
+  /usr/share/locale/it/LC_MESSAGES/gperiodic.mo
   /usr/share/locale/pl/LC_MESSAGES/gperiodic.mo
   /usr/share/locale/sv/LC_MESSAGES/gperiodic.mo
   /usr/share/locale/tr/LC_MESSAGES/gperiodic.mo
@@ -78,6 +66,10 @@ Files included in the binary package:
 ------------------
 
 Port Notes:
+
+----- version 2.0.9-1 -----
+Version bump.
+Patched to use GtkStock icons and GtkAboutDialog.
 
 ----- version 2.0.8-1 -----
 Version bump.
