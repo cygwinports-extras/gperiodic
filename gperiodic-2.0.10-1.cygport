@@ -1,0 +1,15 @@
+inherit gnome2
+
+DESCRIPTION="GTK+ periodic table"
+HOMEPAGE="http://www.frantz.fi/software/gperiodic.php"
+SRC_URI="http://www.frantz.fi/software/${P}.tar.gz"
+
+DIFF_EXCLUDES="po"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake CFLAGS="${CFLAGS}" CPPFLAGS="${CPPFLAGS}" LDFLAGS="${LDFLAGS}"
+}

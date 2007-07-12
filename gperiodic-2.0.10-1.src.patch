@@ -1,0 +1,41 @@
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x po origsrc/gperiodic-2.0.10/Makefile src/gperiodic-2.0.10/Makefile
+--- origsrc/gperiodic-2.0.10/Makefile	2007-07-11 07:58:05.000000000 -0500
++++ src/gperiodic-2.0.10/Makefile	2007-07-11 20:48:44.046875000 -0500
+@@ -1,19 +1,20 @@
+ CC := gcc
+-CFLAGS := `pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED
++CFLAGS := -Wall
++GTK_CFLAGS := `pkg-config --cflags gtk+-2.0` -I. -DG_DISABLE_DEPRECATED -DGDK_DISABLE_DEPRECATED -DGDK_PIXBUF_DISABLE_DEPRECATED -DGTK_DISABLE_DEPRECATED -DG_LOG_DOMAIN="\"GPeriodic\""
+ LIBS :=`pkg-config --libs gtk+-2.0`
+ bindir ?= /usr/bin
+ datadir ?= /usr/share
+ enable_nls ?= 1
+ 
+ .c.o:
+-	$(CC) -c $(CFLAGS) $(CPPFLAGS) $<
++	$(CC) -c $(CFLAGS) $(CPPFLAGS) $(GTK_CFLAGS) $<
+ 
+ all: 
+ 	make gperiodic
+ 	make -C po/ all enable_nls=$(enable_nls)
+ 
+ gperiodic: gperiodic.o
+-	$(CC) $(CFLAGS) -o gperiodic gperiodic.o $(LIBS)
++	$(CC) $(LDFLAGS) -o gperiodic gperiodic.o $(LIBS)
+ ifeq ($(strip),1)
+ 	strip gperiodic
+ endif
+diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x autom4te.cache -x config.cache -x config.log -x config.status -x config.h -x config.h.in -x ABOUT-NLS -x Makefile.in.in -x Makevars.template -x '*SlackBuild*' -x '*.egg-info' -x '*.class' -x '*.pyc' -x '*.mo' -x '*.gmo' -x '*.orig' -x '*.rej' -x '*.spec' -x '*.temp' -x '*~' -x '*.stackdump' -x COPYING -x INSTALL -x compile -x config-ml.in -x config.guess -x config.sub -x depcomp -x elisp-comp -x install-sh -x ltmain.sh -x mdate-sh -x missing -x mkinstalldirs -x py-compile -x symlink-tree -x texinfo.tex -x ylwrap -x omf.make -x xmldocs.make -x gnome-doc-utils.make -x gnome-doc-utils.m4 -x intltool.m4 -x intltool-extract -x intltool-extract.in -x intltool-merge -x intltool-merge.in -x intltool-update -x intltool-update.in -x po origsrc/gperiodic-2.0.10/gperiodic.c src/gperiodic-2.0.10/gperiodic.c
+--- origsrc/gperiodic-2.0.10/gperiodic.c	2007-07-11 08:01:34.000000000 -0500
++++ src/gperiodic-2.0.10/gperiodic.c	2007-07-11 20:48:44.078125000 -0500
+@@ -266,8 +266,8 @@
+   GtkActionEntry entries[] = {
+ 	{ "FileMenu", NULL, _("_File") },
+ 	{ "HelpMenu", NULL, _("_Help") },
+-	{ "Exit", GTK_STOCK_OPEN, _("E_xit"), "<control>Q", _("Exit the program"), (GCallback) menu_file_exit },
+-	{ "About", GTK_STOCK_HELP, _("_About"), "<control>H", _("About gperiodic"), (GCallback) menu_help_about },
++	{ "Exit", GTK_STOCK_QUIT, _("E_xit"), "<control>Q", _("Exit the program"), (GCallback) menu_file_exit },
++	{ "About", GTK_STOCK_ABOUT, _("_About"), NULL, _("About gperiodic"), menu_help_about },
+   };
+ 
+   char *ui_description =
