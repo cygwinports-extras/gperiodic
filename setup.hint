@@ -1,5 +1,5 @@
 category: Science
-requires: cygwin glib2 gtk2-x11 libintl8
+requires: glib2 gtk2-x11 libintl8
 sdesc: "GTK+ periodic table of the elements"
 ldesc: "GPeriodic is a program for looking up data of elements from the 
 periodic table. This program also features a non-graphical interface."
