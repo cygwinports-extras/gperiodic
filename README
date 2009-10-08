@@ -4,20 +4,21 @@ GPeriodic is a program for looking up data of elements from the periodic
 table. This program also features a non-graphical interface.
 
 Runtime requirements:
-  cygwin-1.5.24-2
-  glib2-2.12.12-2
-  gtk2-x11-2.10.13-1
-  libintl8-0.15-1
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libgdk_pixbuf2.0_0-2.16.6-1
+  libglib2.0_0-2.20.5-1
+  libgtk2.0_0-2.16.6-1
+  libintl8-0.17-11
 
 Build requirements:
 (besides corresponding devel packages)
-  cygwin-1.5.24-2
-  binutils-20060817-1
-  cygport-0.3.5-1
-  gcc-core-3.4.4-3
-  gettext-devel-0.15-1
-  make-3.81-1
-  pkg-config-0.21-1
+  binutils-2.19.51-1
+  cygport-0.9.9-1
+  gcc4-core-4.3.4-1
+  gettext-devel-0.17-11
+  make-3.81-2
+  pkg-config-0.23b-10
 
 Canonical homepage:
   http://www.frantz.fi/software/gperiodic.php
@@ -43,42 +44,10 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/bin/gperiodic.exe
-  /usr/share/applications/gperiodic.desktop
-  /usr/share/doc/Cygwin/gperiodic-2.0.10.README
-  /usr/share/doc/gperiodic-2.0.10/AUTHORS
-  /usr/share/doc/gperiodic-2.0.10/ChangeLog
-  /usr/share/doc/gperiodic-2.0.10/GPL.txt
-  /usr/share/doc/gperiodic-2.0.10/INSTALL
-  /usr/share/doc/gperiodic-2.0.10/README
-  /usr/share/locale/da/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/fr/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/gl/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/it/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/pl/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/sv/LC_MESSAGES/gperiodic.mo
-  /usr/share/locale/tr/LC_MESSAGES/gperiodic.mo
-  /usr/share/pixmaps/gperiodic-crystal.png
-  /usr/share/pixmaps/gperiodic.png
-
-------------------
-
 Port Notes:
 
------ version 2.0.10-1 -----
-Version bump.
-
------ version 2.0.9-1 -----
-Version bump.
-Patched to use GtkStock icons and GtkAboutDialog.
-
------ version 2.0.8-1 -----
-Version bump.
-
------ version 2.0.7-1 -----
-Initial release for Cygwin.
+----- version 2.0.10-2 -----
+Initial release for Cygwin 1.7.
 
 
 Cygwin port maintained by:

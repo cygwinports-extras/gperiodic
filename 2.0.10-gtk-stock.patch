@@ -1,0 +1,13 @@
+--- origsrc/gperiodic-2.0.10/gperiodic.c	2007-07-11 08:01:34.000000000 -0500
++++ src/gperiodic-2.0.10/gperiodic.c	2007-07-11 20:48:44.078125000 -0500
+@@ -266,8 +266,8 @@
+   GtkActionEntry entries[] = {
+ 	{ "FileMenu", NULL, _("_File") },
+ 	{ "HelpMenu", NULL, _("_Help") },
+-	{ "Exit", GTK_STOCK_OPEN, _("E_xit"), "<control>Q", _("Exit the program"), (GCallback) menu_file_exit },
+-	{ "About", GTK_STOCK_HELP, _("_About"), "<control>H", _("About gperiodic"), (GCallback) menu_help_about },
++	{ "Exit", GTK_STOCK_QUIT, _("E_xit"), "<control>Q", _("Exit the program"), (GCallback) menu_file_exit },
++	{ "About", GTK_STOCK_ABOUT, _("_About"), NULL, _("About gperiodic"), (GCallback) menu_help_about },
+   };
+ 
+   char *ui_description =

@@ -1,0 +1,10 @@
+--- origsrc/gperiodic-2.0.10/gperiodic.c	2009-10-07 18:39:01.713146600 -0500
++++ src/gperiodic-2.0.10/gperiodic.c	2009-10-07 18:57:40.764098500 -0500
+@@ -285,6 +285,7 @@ void main_prog(void)
+ /* create the main window */
+     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+     gtk_window_set_title(GTK_WINDOW(window),_("GPeriodic"));
++    gtk_window_set_icon(GTK_WINDOW(window), GDK_PIXBUF(gdk_pixbuf_new_from_file("/usr/share/pixmaps/gperiodic.png", NULL)));
+     gtk_container_set_border_width(GTK_CONTAINER(window),0);
+     gtk_window_set_resizable(GTK_WINDOW(window),0);
+     
