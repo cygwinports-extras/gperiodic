@@ -1,0 +1,21 @@
+NAME="gperiodic"
+VERSION=2.0.10
+RELEASE=2
+CATEGORY="Science"
+SUMMARY="GTK+ periodic table of the elements"
+DESCRIPTION="GPeriodic is a program for looking up data of elements from the
+periodic table. This program also features a non-graphical interface."
+HOMEPAGE="http://www.frantz.fi/software/gperiodic.php"
+SRC_URI="http://www.frantz.fi/software/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="2.0.10-gtk-stock.patch
+           2.0.10-gtk-window-set-icon.patch"
+
+DIFF_EXCLUDES="po"
+
+MAKEOPTS+=" -j1"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake CFLAGS="${CFLAGS} $(pkg-config --cflags gtk+-2.0)" CPPFLAGS="${CPPFLAGS}"
+}

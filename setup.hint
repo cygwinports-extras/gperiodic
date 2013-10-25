@@ -1,5 +1,0 @@
-category: Science
-requires: libgcc1 libgdk_pixbuf2.0_0 libglib2.0_0 libgtk2.0_0 libintl8
-sdesc: "GTK+ periodic table of the elements"
-ldesc: "GPeriodic is a program for looking up data of elements from the 
-periodic table. This program also features a non-graphical interface."
